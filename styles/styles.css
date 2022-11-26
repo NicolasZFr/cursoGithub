@@ -46,12 +46,12 @@ main {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     margin: 1vh auto;
-    color: brown;
-    color: rgb(36, 4, 4);
+    color: rgb(94, 9, 9);
 }
 
 .main-text {
@@ -59,6 +59,56 @@ h1 {
     width: 80vw;
     margin: 0 auto;
 }
+
+/* Botón texto */
+
+.textbox {
+    position: relative;
+    margin-top: 10vh;
+}
+
+.textbox input {
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    background: #313136;
+    border: 0;
+    padding-left: 126px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: rgb(255, 255, 255 / 96%);
+    transition: 0.3s;
+}
+
+.textbox label {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-origin: 0% 0%;
+    pointer-events: none;
+    top: 4px;
+    left: 4px;
+    height: 52px;
+    width: 110px;
+    border-radius: 27px;
+    background: #5071fa;
+    transition: 0.3s;
+}
+
+.textbox input::placeholder {
+    color: rgb(255, 255, 255 / 50%);
+}
+
+.textbox :is(input:focus, input:valid) {
+    padding-left: 20px;
+}
+
+.textbox :is(input:focus, input:valid) ~ label {
+    translate: 0 -54px;
+    scale: 0.825;
+}
+
+/*footer*/
 
 footer {
     height: 10vh;
